@@ -1,8 +1,10 @@
+from flask_bootstrap import Bootstrap4
 from flask import Flask, render_template
 
 app = Flask(__name__)
+bootstrap = Bootstrap4(app)
 
-@app.route('/')
+@app.route("/")
 def index():
     return render_template("index.html", h1 = "Главная страница")
 
